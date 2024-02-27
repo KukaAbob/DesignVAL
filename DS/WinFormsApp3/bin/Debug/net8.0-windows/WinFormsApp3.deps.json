@@ -1,0 +1,94 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "WinFormsApp3/1.0.0": {
+        "dependencies": {
+          "HtmlAgilityPack": "1.11.59",
+          "Selenium.Support": "4.18.1",
+          "Selenium.WebDriver": "4.18.1"
+        },
+        "runtime": {
+          "WinFormsApp3.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.11.59": {
+        "runtime": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.11.59.0",
+            "fileVersion": "1.11.59.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
+      "Selenium.Support/4.18.1": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.18.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "Selenium.WebDriver/4.18.1": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WinFormsApp3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HtmlAgilityPack/1.11.59": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0tMaGzTJ5uFFMCYvprZ4hRYg6Dm5E+/WeMFJiD5K83Fe/Y6kyLaRKcfrfUwfb1j428XzB4/2RR7sdxoQX5eaEA==",
+      "path": "htmlagilitypack/1.11.59",
+      "hashPath": "htmlagilitypack.1.11.59.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
+    "Selenium.Support/4.18.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o83krRx6DklUtg4Onukp5SE9r6drfBDxzmGrFynICb8fTlXXZ75zdp8wp3+8sdcRaBCgpdlgQFCqoA6HOjzhow==",
+      "path": "selenium.support/4.18.1",
+      "hashPath": "selenium.support.4.18.1.nupkg.sha512"
+    },
+    "Selenium.WebDriver/4.18.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-x9Pkz+kzcZ6dToJFLiem36pp0xmIfu/DXFf3U7EaoFqdtYyLsDJB0e/v58NAghcPTrAwJMSduEAokBRFFCxAxg==",
+      "path": "selenium.webdriver/4.18.1",
+      "hashPath": "selenium.webdriver.4.18.1.nupkg.sha512"
+    }
+  }
+}
