@@ -184,19 +184,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Куаныш\\.nuget\\packages\\": {}
+    "C:\\Users\\Askha\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Куаныш\\source\\repos\\DS\\WinFormsApp3\\WinFormsApp3.csproj",
+      "projectUniqueName": "C:\\Users\\Askha\\Source\\Repos\\DesignVAL\\DS\\WinFormsApp3\\WinFormsApp3.csproj",
       "projectName": "WinFormsApp3",
-      "projectPath": "C:\\Users\\Куаныш\\source\\repos\\DS\\WinFormsApp3\\WinFormsApp3.csproj",
-      "packagesPath": "C:\\Users\\Куаныш\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Куаныш\\source\\repos\\DS\\WinFormsApp3\\obj\\",
+      "projectPath": "C:\\Users\\Askha\\Source\\Repos\\DesignVAL\\DS\\WinFormsApp3\\WinFormsApp3.csproj",
+      "packagesPath": "C:\\Users\\Askha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Askha\\Source\\Repos\\DesignVAL\\DS\\WinFormsApp3\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Куаныш\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Askha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -204,6 +209,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

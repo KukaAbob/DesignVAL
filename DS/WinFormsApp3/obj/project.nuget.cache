@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "eMIti/8oWtv0oSozaQ917eCjgF42wtH2iU71hJPVg8b43N9AGgzHnmVta0CljAbqXVOOqWcZikpNYK2oNHiorg==",
+  "dgSpecHash": "/eG90hJkVOLC6XBrOTIVv7neZUdrLcmhfDfy285dJTM8TkDHr8/l6QSyXpBqboENsuQX0sH6z73rkZJN05iUbA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Куаныш\\source\\repos\\DS\\WinFormsApp3\\WinFormsApp3.csproj",
+  "projectFilePath": "C:\\Users\\Askha\\Source\\Repos\\DesignVAL\\DS\\WinFormsApp3\\WinFormsApp3.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Куаныш\\.nuget\\packages\\htmlagilitypack\\1.11.59\\htmlagilitypack.1.11.59.nupkg.sha512",
-    "C:\\Users\\Куаныш\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\Куаныш\\.nuget\\packages\\selenium.support\\4.18.1\\selenium.support.4.18.1.nupkg.sha512",
-    "C:\\Users\\Куаныш\\.nuget\\packages\\selenium.webdriver\\4.18.1\\selenium.webdriver.4.18.1.nupkg.sha512"
+    "C:\\Users\\Askha\\.nuget\\packages\\htmlagilitypack\\1.11.59\\htmlagilitypack.1.11.59.nupkg.sha512",
+    "C:\\Users\\Askha\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Askha\\.nuget\\packages\\selenium.support\\4.18.1\\selenium.support.4.18.1.nupkg.sha512",
+    "C:\\Users\\Askha\\.nuget\\packages\\selenium.webdriver\\4.18.1\\selenium.webdriver.4.18.1.nupkg.sha512"
   ],
   "logs": []
 }

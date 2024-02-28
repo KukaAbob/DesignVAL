@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Globalization;
 using OpenQA.Selenium.Support.Events;
+using System.Globalization;
 namespace WinFormsApp3
 {
     public partial class Form1 : Form
@@ -22,6 +23,11 @@ namespace WinFormsApp3
         public double usd;
         private double eur;
         private double rub;
+
+        public void AY52CANKPETERBYRG()
+        {
+
+        }
 
         protected IWebDriver Driver;
         private void Form1_Load(object sender, EventArgs e)
@@ -133,12 +139,15 @@ namespace WinFormsApp3
             textBoxEuro.Text = euro.Text;
             textBoxRub.Text = veznoDerevanny.Text;
 
-            double usd = Convert.ToDouble(dollar.Text);
-            double eur = Convert.ToDouble(euro.Text);
-            double rub = Convert.ToDouble(veznoDerevanny.Text);
+            double usd = Convert.ToDouble(dollar.Text, CultureInfo.InvariantCulture);
+            double eur = Convert.ToDouble(euro.Text, CultureInfo.InvariantCulture);
+            double rub = Convert.ToDouble(veznoDerevanny.Text, CultureInfo.InvariantCulture);
 
+        }
 
-
+        public double abob
+        {
+            set { Convert.ToString(usd); }
         }
 
 
@@ -301,25 +310,41 @@ namespace WinFormsApp3
         private void textBoxFir_TextChanged(object sender, EventArgs e)
         {
 
-            string a = textBoxFir.Text;
-            Convert.ToDouble(a);
-            if (double.TryParse(a, out double b))
+            string inputText = textBoxFir.Text;
+
+            if (double.TryParse(inputText, out double inputValue))
             {
-                if (comboBox1.SelectedIndex == 0)
+                try
                 {
-                    double c = b * usd;
-                    textBoxSec.Text = c.ToString();
+                    double result = 0.0;
+
+                    if (comboBox1.SelectedIndex == 0)
+                    {
+                        result = inputValue * usd;
+                    }
+                    else if (comboBox1.SelectedIndex == 1)
+                    {
+                        result = inputValue * eur;
+                    }
+                    else
+                    {
+                        result = inputValue * rub;
+                    }
+
+                    textBoxSec.Text = result.ToString();
                 }
-                else if (comboBox1.SelectedIndex == 1)
+                catch (OverflowException)
                 {
-                    double d = b * eur;
-                    textBoxSec.Text = d.ToString();
+                    MessageBox.Show("Результат слишком велик для представления в double.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
+                catch (Exception ex)
                 {
-                    double o = b * rub;
-                    textBoxSec.Text = o.ToString();
+                    MessageBox.Show($"Ошибка при вычислении: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+            else
+            {
+                textBoxSec.Text = "Введите корректное числовое значение";
             }
         }
 
@@ -350,37 +375,8 @@ namespace WinFormsApp3
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            IWebElement aboba = Driver.FindElement(By.CssSelector("#sorting_table_shares_top > tbody > tr:nth-child(3) > td:nth-child(3)"));
-            IWebElement abob = Driver.FindElement(By.CssSelector("#sorting_table_shares_top > tbody > tr:nth-child(3) > td:nth-child(4) > span"));
-            IWebElement abobus = Driver.FindElement(By.CssSelector("#sorting_table_shares_top > tbody > tr:nth-child(3) > td.sorting_1 > span"));
 
 
-            textBox1.Text = aboba.Text;
-            textBox2.Text = abob.Text;
-            textBox3.Text = abobus.Text;
-
-
-
-            IWebElement hahaha = Driver.FindElement(By.CssSelector("#__next > div.desktop\\:relative.desktop\\:bg-background-default > div.relative.flex > div.grid.flex-1.grid-cols-1.px-4.pt-5.font-sans-v2.text-\\[\\#232526\\].antialiased.xl\\:container.sm\\:px-6.md\\:grid-cols-\\[1fr_72px\\].md\\:gap-6.md\\:px-7.md\\:pt-10.md2\\:grid-cols-\\[1fr_420px\\].md2\\:gap-8.md2\\:px-8.xl\\:mx-auto > div.min-w-0 > div:nth-child(4) > div.relative.w-full > div.relative.dynamic-table-v2_dynamic-table-wrapper__fBEvo.dynamic-table-v2_scrollbar-x__R96pe > table > tbody > tr:nth-child(5) > td:nth-child(3) > span"));
-            IWebElement hahaha1 = Driver.FindElement(By.CssSelector("#__next > div.desktop\\:relative.desktop\\:bg-background-default > div.relative.flex > div.grid.flex-1.grid-cols-1.px-4.pt-5.font-sans-v2.text-\\[\\#232526\\].antialiased.xl\\:container.sm\\:px-6.md\\:grid-cols-\\[1fr_72px\\].md\\:gap-6.md\\:px-7.md\\:pt-10.md2\\:grid-cols-\\[1fr_420px\\].md2\\:gap-8.md2\\:px-8.xl\\:mx-auto > div.min-w-0 > div:nth-child(4) > div.relative.w-full > div.relative.dynamic-table-v2_dynamic-table-wrapper__fBEvo.dynamic-table-v2_scrollbar-x__R96pe > table > tbody > tr:nth-child(5) > td.datatable-v2_cell__IwP1U.datatable-v2_cell--down__sYmZ4.datatable-v2_cell--bold__cXQUV.dynamic-table_col-other__Eu_RC.text-right.font-bold.rtl\\:text-right"));
-            IWebElement hahaha2 = Driver.FindElement(By.CssSelector("#__next > div.desktop\\:relative.desktop\\:bg-background-default > div.relative.flex > div.grid.flex-1.grid-cols-1.px-4.pt-5.font-sans-v2.text-\\[\\#232526\\].antialiased.xl\\:container.sm\\:px-6.md\\:grid-cols-\\[1fr_72px\\].md\\:gap-6.md\\:px-7.md\\:pt-10.md2\\:grid-cols-\\[1fr_420px\\].md2\\:gap-8.md2\\:px-8.xl\\:mx-auto > div.min-w-0 > div:nth-child(4) > div.relative.w-full > div.relative.dynamic-table-v2_dynamic-table-wrapper__fBEvo.dynamic-table-v2_scrollbar-x__R96pe > table > tbody > tr:nth-child(5) > td:nth-child(4)"));
-
-            textBox1.Text = hahaha.Text;
-            textBox2.Text = hahaha1.Text;
-            textBox3.Text = hahaha2.Text;
-
-
-            IWebElement hahahe = Driver.FindElement(By.CssSelector("#__next > div.desktop\\:relative.desktop\\:bg-background-default > div.relative.flex > div.grid.flex-1.grid-cols-1.px-4.pt-5.font-sans-v2.text-\\[\\#232526\\].antialiased.xl\\:container.sm\\:px-6.md\\:grid-cols-\\[1fr_72px\\].md\\:gap-6.md\\:px-7.md\\:pt-10.md2\\:grid-cols-\\[1fr_420px\\].md2\\:gap-8.md2\\:px-8.xl\\:mx-auto > div.min-w-0 > div:nth-child(4) > div.relative.w-full > div.relative.dynamic-table-v2_dynamic-table-wrapper__fBEvo.dynamic-table-v2_scrollbar-x__R96pe > table > tbody > tr:nth-child(8) > td:nth-child(3) > span"));
-            IWebElement hahahe1 = Driver.FindElement(By.CssSelector("#__next > div.desktop\\:relative.desktop\\:bg-background-default > div.relative.flex > div.grid.flex-1.grid-cols-1.px-4.pt-5.font-sans-v2.text-\\[\\#232526\\].antialiased.xl\\:container.sm\\:px-6.md\\:grid-cols-\\[1fr_72px\\].md\\:gap-6.md\\:px-7.md\\:pt-10.md2\\:grid-cols-\\[1fr_420px\\].md2\\:gap-8.md2\\:px-8.xl\\:mx-auto > div.min-w-0 > div:nth-child(4) > div.relative.w-full > div.relative.dynamic-table-v2_dynamic-table-wrapper__fBEvo.dynamic-table-v2_scrollbar-x__R96pe > table > tbody > tr:nth-child(8) > td.datatable-v2_cell__IwP1U.datatable-v2_cell--up__lVyET.datatable-v2_cell--bold__cXQUV.dynamic-table_col-other__Eu_RC.text-right.font-bold.rtl\\:text-right"));
-            IWebElement hahahe2 = Driver.FindElement(By.CssSelector("#__next > div.desktop\\:relative.desktop\\:bg-background-default > div.relative.flex > div.grid.flex-1.grid-cols-1.px-4.pt-5.font-sans-v2.text-\\[\\#232526\\].antialiased.xl\\:container.sm\\:px-6.md\\:grid-cols-\\[1fr_72px\\].md\\:gap-6.md\\:px-7.md\\:pt-10.md2\\:grid-cols-\\[1fr_420px\\].md2\\:gap-8.md2\\:px-8.xl\\:mx-auto > div.min-w-0 > div:nth-child(4) > div.relative.w-full > div.relative.dynamic-table-v2_dynamic-table-wrapper__fBEvo.dynamic-table-v2_scrollbar-x__R96pe > table > tbody > tr:nth-child(8) > td:nth-child(4)"));
-
-            textBox1.Text = hahahe.Text;
-            textBox2.Text = hahahe1.Text;
-            textBox3.Text = hahahe2.Text;
-
-
-            comboBox2.Text = "KCELL";
-            textBox1.Text = "abob";
 
         }
 
@@ -440,6 +436,16 @@ namespace WinFormsApp3
         }
 
         private void textBoxtelekom3_QueryAccessibilityHelp(object sender, QueryAccessibilityHelpEventArgs e)
+        {
+
+        }
+
+        private void notifyIcon3_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void notifyIcon8_MouseDoubleClick(object sender, MouseEventArgs e)
         {
 
         }
