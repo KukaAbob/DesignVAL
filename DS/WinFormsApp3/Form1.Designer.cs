@@ -31,13 +31,15 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panelbutton1 = new Panel();
-            textBoxFir = new TextBox();
-            panelkaspi1 = new Panel();
+            panel6 = new Panel();
             textBoxkaspi1 = new TextBox();
-            panelkaspi3 = new Panel();
-            textBoxkaspi3 = new TextBox();
-            panelkaspi2 = new Panel();
             textBoxkaspi2 = new TextBox();
+            textBoxkaspi3 = new TextBox();
+            textBoxtelekom3 = new TextBox();
+            textBoxtelekom2 = new TextBox();
+            panelkaspi1 = new Panel();
+            panelkaspi3 = new Panel();
+            panelkaspi2 = new Panel();
             flowLayoutPanelCost = new FlowLayoutPanel();
             textBox1 = new TextBox();
             flowLayoutPanelMakc = new FlowLayoutPanel();
@@ -54,15 +56,6 @@
             curs = new Button();
             panellogo = new Panel();
             comboBox1 = new ComboBox();
-            panel6 = new Panel();
-            panel11 = new Panel();
-            panel9 = new Panel();
-            panel10 = new Panel();
-            textBoxSec = new TextBox();
-            paneltelekom2 = new Panel();
-            textBoxtelekom2 = new TextBox();
-            paneltelekom3 = new Panel();
-            textBoxtelekom3 = new TextBox();
             panel5 = new Panel();
             textBoxRub = new TextBox();
             panel4 = new Panel();
@@ -79,10 +72,8 @@
             notifyIcon6 = new NotifyIcon(components);
             notifyIcon7 = new NotifyIcon(components);
             notifyIcon8 = new NotifyIcon(components);
+            openFileDialog1 = new OpenFileDialog();
             panelbutton1.SuspendLayout();
-            panelkaspi1.SuspendLayout();
-            panelkaspi3.SuspendLayout();
-            panelkaspi2.SuspendLayout();
             flowLayoutPanelCost.SuspendLayout();
             flowLayoutPanelMakc.SuspendLayout();
             flowLayoutPanelDoxod.SuspendLayout();
@@ -90,10 +81,6 @@
             panel3.SuspendLayout();
             panel.SuspendLayout();
             panel1.SuspendLayout();
-            panel6.SuspendLayout();
-            panel9.SuspendLayout();
-            paneltelekom2.SuspendLayout();
-            paneltelekom3.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -103,7 +90,12 @@
             // panelbutton1
             // 
             panelbutton1.BackColor = Color.FromArgb(27, 37, 37);
-            panelbutton1.Controls.Add(textBoxFir);
+            panelbutton1.Controls.Add(panel6);
+            panelbutton1.Controls.Add(textBoxkaspi1);
+            panelbutton1.Controls.Add(textBoxkaspi2);
+            panelbutton1.Controls.Add(textBoxkaspi3);
+            panelbutton1.Controls.Add(textBoxtelekom3);
+            panelbutton1.Controls.Add(textBoxtelekom2);
             panelbutton1.Controls.Add(panelkaspi1);
             panelbutton1.Controls.Add(panelkaspi3);
             panelbutton1.Controls.Add(panelkaspi2);
@@ -113,7 +105,6 @@
             panelbutton1.Controls.Add(comboBox2);
             panelbutton1.Controls.Add(panelglobal);
             panelbutton1.Controls.Add(comboBox1);
-            panelbutton1.Controls.Add(panel6);
             panelbutton1.Controls.Add(panel5);
             panelbutton1.Controls.Add(panel4);
             panelbutton1.Controls.Add(panel2);
@@ -126,31 +117,20 @@
             panelbutton1.TabIndex = 1;
             panelbutton1.Paint += panelbutton1_Paint;
             // 
-            // textBoxFir
+            // panel6
             // 
-            textBoxFir.BackColor = SystemColors.Highlight;
-            textBoxFir.Location = new Point(859, 196);
-            textBoxFir.Margin = new Padding(3, 2, 3, 2);
-            textBoxFir.Multiline = true;
-            textBoxFir.Name = "textBoxFir";
-            textBoxFir.Size = new Size(165, 132);
-            textBoxFir.TabIndex = 0;
-            textBoxFir.TextChanged += textBoxFir_TextChanged;
-            // 
-            // panelkaspi1
-            // 
-            panelkaspi1.Controls.Add(textBoxkaspi1);
-            panelkaspi1.Location = new Point(180, 326);
-            panelkaspi1.Margin = new Padding(3, 2, 3, 2);
-            panelkaspi1.Name = "panelkaspi1";
-            panelkaspi1.Size = new Size(167, 34);
-            panelkaspi1.TabIndex = 11;
-            panelkaspi1.Paint += panelkaspi1_Paint;
+            panel6.BackColor = Color.Gray;
+            panel6.ForeColor = Color.DarkOliveGreen;
+            panel6.Location = new Point(356, 135);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(672, 224);
+            panel6.TabIndex = 13;
+            panel6.Visible = false;
+            panel6.Paint += panel6_Paint_1;
             // 
             // textBoxkaspi1
             // 
-            textBoxkaspi1.Dock = DockStyle.Fill;
-            textBoxkaspi1.Location = new Point(0, 0);
+            textBoxkaspi1.Location = new Point(381, 330);
             textBoxkaspi1.Margin = new Padding(3, 2, 3, 2);
             textBoxkaspi1.Multiline = true;
             textBoxkaspi1.Name = "textBoxkaspi1";
@@ -159,40 +139,9 @@
             textBoxkaspi1.Visible = false;
             textBoxkaspi1.TextChanged += textBoxkaspi1_TextChanged;
             // 
-            // panelkaspi3
-            // 
-            panelkaspi3.Controls.Add(textBoxkaspi3);
-            panelkaspi3.Location = new Point(594, 326);
-            panelkaspi3.Margin = new Padding(3, 2, 3, 2);
-            panelkaspi3.Name = "panelkaspi3";
-            panelkaspi3.Size = new Size(167, 34);
-            panelkaspi3.TabIndex = 10;
-            panelkaspi3.Paint += panelkaspi3_Paint;
-            // 
-            // textBoxkaspi3
-            // 
-            textBoxkaspi3.Location = new Point(3, -2);
-            textBoxkaspi3.Margin = new Padding(3, 2, 3, 2);
-            textBoxkaspi3.Multiline = true;
-            textBoxkaspi3.Name = "textBoxkaspi3";
-            textBoxkaspi3.Size = new Size(168, 36);
-            textBoxkaspi3.TabIndex = 1;
-            textBoxkaspi3.Visible = false;
-            textBoxkaspi3.TextChanged += textBoxkaspi3_TextChanged;
-            // 
-            // panelkaspi2
-            // 
-            panelkaspi2.Controls.Add(textBoxkaspi2);
-            panelkaspi2.Location = new Point(385, 328);
-            panelkaspi2.Margin = new Padding(3, 2, 3, 2);
-            panelkaspi2.Name = "panelkaspi2";
-            panelkaspi2.Size = new Size(172, 32);
-            panelkaspi2.TabIndex = 9;
-            panelkaspi2.Paint += panelkaspi2_Paint;
-            // 
             // textBoxkaspi2
             // 
-            textBoxkaspi2.Location = new Point(0, 0);
+            textBoxkaspi2.Location = new Point(613, 330);
             textBoxkaspi2.Margin = new Padding(3, 2, 3, 2);
             textBoxkaspi2.Multiline = true;
             textBoxkaspi2.Name = "textBoxkaspi2";
@@ -201,10 +150,71 @@
             textBoxkaspi2.Visible = false;
             textBoxkaspi2.TextChanged += textBoxkaspi2_TextChanged;
             // 
+            // textBoxkaspi3
+            // 
+            textBoxkaspi3.Location = new Point(842, 326);
+            textBoxkaspi3.Margin = new Padding(3, 2, 3, 2);
+            textBoxkaspi3.Multiline = true;
+            textBoxkaspi3.Name = "textBoxkaspi3";
+            textBoxkaspi3.Size = new Size(168, 36);
+            textBoxkaspi3.TabIndex = 1;
+            textBoxkaspi3.Visible = false;
+            textBoxkaspi3.TextChanged += textBoxkaspi3_TextChanged;
+            // 
+            // textBoxtelekom3
+            // 
+            textBoxtelekom3.Location = new Point(586, 235);
+            textBoxtelekom3.Margin = new Padding(3, 2, 3, 2);
+            textBoxtelekom3.Multiline = true;
+            textBoxtelekom3.Name = "textBoxtelekom3";
+            textBoxtelekom3.Size = new Size(216, 34);
+            textBoxtelekom3.TabIndex = 0;
+            textBoxtelekom3.Visible = false;
+            textBoxtelekom3.TextChanged += textBoxtelekom3_TextChanged;
+            textBoxtelekom3.QueryAccessibilityHelp += textBoxtelekom3_QueryAccessibilityHelp;
+            // 
+            // textBoxtelekom2
+            // 
+            textBoxtelekom2.Location = new Point(822, 234);
+            textBoxtelekom2.Margin = new Padding(3, 2, 3, 2);
+            textBoxtelekom2.Multiline = true;
+            textBoxtelekom2.Name = "textBoxtelekom2";
+            textBoxtelekom2.Size = new Size(216, 34);
+            textBoxtelekom2.TabIndex = 0;
+            textBoxtelekom2.Visible = false;
+            textBoxtelekom2.TextChanged += textBoxtelekom2_TextChanged;
+            // 
+            // panelkaspi1
+            // 
+            panelkaspi1.Location = new Point(381, 330);
+            panelkaspi1.Margin = new Padding(3, 2, 3, 2);
+            panelkaspi1.Name = "panelkaspi1";
+            panelkaspi1.Size = new Size(167, 34);
+            panelkaspi1.TabIndex = 11;
+            panelkaspi1.Paint += panelkaspi1_Paint;
+            // 
+            // panelkaspi3
+            // 
+            panelkaspi3.Location = new Point(843, 328);
+            panelkaspi3.Margin = new Padding(3, 2, 3, 2);
+            panelkaspi3.Name = "panelkaspi3";
+            panelkaspi3.Size = new Size(167, 34);
+            panelkaspi3.TabIndex = 10;
+            panelkaspi3.Paint += panelkaspi3_Paint;
+            // 
+            // panelkaspi2
+            // 
+            panelkaspi2.Location = new Point(613, 330);
+            panelkaspi2.Margin = new Padding(3, 2, 3, 2);
+            panelkaspi2.Name = "panelkaspi2";
+            panelkaspi2.Size = new Size(172, 32);
+            panelkaspi2.TabIndex = 9;
+            panelkaspi2.Paint += panelkaspi2_Paint;
+            // 
             // flowLayoutPanelCost
             // 
             flowLayoutPanelCost.Controls.Add(textBox1);
-            flowLayoutPanelCost.Location = new Point(350, 154);
+            flowLayoutPanelCost.Location = new Point(340, 153);
             flowLayoutPanelCost.Margin = new Padding(3, 2, 3, 2);
             flowLayoutPanelCost.Name = "flowLayoutPanelCost";
             flowLayoutPanelCost.Size = new Size(219, 30);
@@ -380,114 +390,17 @@
             // comboBox1
             // 
             comboBox1.BackColor = Color.FromArgb(0, 64, 0);
+            comboBox1.Cursor = Cursors.Hand;
+            comboBox1.ForeColor = SystemColors.Info;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "USD", "EUR", "RUB" });
-            comboBox1.Location = new Point(180, 245);
+            comboBox1.Items.AddRange(new object[] { "USD", "EUR", "RUB", "JUST TRY" });
+            comboBox1.Location = new Point(180, 246);
             comboBox1.Margin = new Padding(3, 2, 3, 2);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(133, 23);
             comboBox1.TabIndex = 5;
             comboBox1.Visible = false;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.FromArgb(0, 64, 64);
-            panel6.Controls.Add(panel11);
-            panel6.Controls.Add(panel9);
-            panel6.Controls.Add(textBoxSec);
-            panel6.Controls.Add(paneltelekom2);
-            panel6.Controls.Add(paneltelekom3);
-            panel6.Location = new Point(387, 184);
-            panel6.Margin = new Padding(3, 2, 3, 2);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(441, 142);
-            panel6.TabIndex = 4;
-            panel6.Visible = false;
-            panel6.Paint += panel6_Paint;
-            // 
-            // panel11
-            // 
-            panel11.BackColor = Color.White;
-            panel11.Location = new Point(413, 142);
-            panel11.Margin = new Padding(3, 2, 3, 2);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(167, 34);
-            panel11.TabIndex = 11;
-            // 
-            // panel9
-            // 
-            panel9.Controls.Add(panel10);
-            panel9.Location = new Point(410, 142);
-            panel9.Margin = new Padding(3, 2, 3, 2);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(167, 34);
-            panel9.TabIndex = 11;
-            // 
-            // panel10
-            // 
-            panel10.Location = new Point(12, 0);
-            panel10.Margin = new Padding(3, 2, 3, 2);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(167, 34);
-            panel10.TabIndex = 11;
-            // 
-            // textBoxSec
-            // 
-            textBoxSec.Dock = DockStyle.Left;
-            textBoxSec.Location = new Point(0, 0);
-            textBoxSec.Margin = new Padding(3, 2, 3, 2);
-            textBoxSec.Multiline = true;
-            textBoxSec.Name = "textBoxSec";
-            textBoxSec.Size = new Size(165, 142);
-            textBoxSec.TabIndex = 1;
-            textBoxSec.Visible = false;
-            textBoxSec.TextChanged += textBoxFir_TextChanged;
-            // 
-            // paneltelekom2
-            // 
-            paneltelekom2.Controls.Add(textBoxtelekom2);
-            paneltelekom2.Location = new Point(164, 51);
-            paneltelekom2.Margin = new Padding(3, 2, 3, 2);
-            paneltelekom2.Name = "paneltelekom2";
-            paneltelekom2.Size = new Size(136, 34);
-            paneltelekom2.TabIndex = 13;
-            paneltelekom2.Paint += paneltelekom2_Paint;
-            // 
-            // textBoxtelekom2
-            // 
-            textBoxtelekom2.Dock = DockStyle.Fill;
-            textBoxtelekom2.Location = new Point(0, 0);
-            textBoxtelekom2.Margin = new Padding(3, 2, 3, 2);
-            textBoxtelekom2.Multiline = true;
-            textBoxtelekom2.Name = "textBoxtelekom2";
-            textBoxtelekom2.Size = new Size(136, 34);
-            textBoxtelekom2.TabIndex = 0;
-            textBoxtelekom2.Visible = false;
-            textBoxtelekom2.TextChanged += textBoxtelekom2_TextChanged;
-            // 
-            // paneltelekom3
-            // 
-            paneltelekom3.Controls.Add(textBoxtelekom3);
-            paneltelekom3.Location = new Point(413, 51);
-            paneltelekom3.Margin = new Padding(3, 2, 3, 2);
-            paneltelekom3.Name = "paneltelekom3";
-            paneltelekom3.Size = new Size(136, 34);
-            paneltelekom3.TabIndex = 13;
-            paneltelekom3.Paint += paneltelekom3_Paint;
-            // 
-            // textBoxtelekom3
-            // 
-            textBoxtelekom3.Dock = DockStyle.Fill;
-            textBoxtelekom3.Location = new Point(0, 0);
-            textBoxtelekom3.Margin = new Padding(3, 2, 3, 2);
-            textBoxtelekom3.Multiline = true;
-            textBoxtelekom3.Name = "textBoxtelekom3";
-            textBoxtelekom3.Size = new Size(136, 34);
-            textBoxtelekom3.TabIndex = 0;
-            textBoxtelekom3.Visible = false;
-            textBoxtelekom3.TextChanged += textBoxtelekom3_TextChanged;
-            textBoxtelekom3.QueryAccessibilityHelp += textBoxtelekom3_QueryAccessibilityHelp;
             // 
             // panel5
             // 
@@ -501,6 +414,7 @@
             // textBoxRub
             // 
             textBoxRub.BackColor = Color.FromArgb(0, 64, 64);
+            textBoxRub.Cursor = Cursors.No;
             textBoxRub.Dock = DockStyle.Fill;
             textBoxRub.ForeColor = SystemColors.Info;
             textBoxRub.Location = new Point(0, 0);
@@ -525,6 +439,7 @@
             // textBoxEuro
             // 
             textBoxEuro.BackColor = Color.FromArgb(0, 64, 64);
+            textBoxEuro.Cursor = Cursors.No;
             textBoxEuro.Dock = DockStyle.Fill;
             textBoxEuro.ForeColor = SystemColors.Info;
             textBoxEuro.Location = new Point(0, 0);
@@ -549,6 +464,7 @@
             // textBoxDollar
             // 
             textBoxDollar.BackColor = Color.FromArgb(0, 64, 64);
+            textBoxDollar.Cursor = Cursors.No;
             textBoxDollar.Dock = DockStyle.Fill;
             textBoxDollar.ForeColor = SystemColors.Info;
             textBoxDollar.Location = new Point(0, 0);
@@ -564,19 +480,21 @@
             // paneltelek
             // 
             paneltelek.Controls.Add(textBoxtelekom);
-            paneltelek.Location = new Point(358, 235);
+            paneltelek.Location = new Point(353, 235);
             paneltelek.Margin = new Padding(3, 2, 3, 2);
             paneltelek.Name = "paneltelek";
-            paneltelek.Size = new Size(136, 34);
+            paneltelek.Size = new Size(217, 34);
             paneltelek.TabIndex = 12;
+            paneltelek.Paint += paneltelek_Paint;
             // 
             // textBoxtelekom
             // 
             textBoxtelekom.Dock = DockStyle.Fill;
             textBoxtelekom.Location = new Point(0, 0);
             textBoxtelekom.Margin = new Padding(3, 2, 3, 2);
+            textBoxtelekom.Multiline = true;
             textBoxtelekom.Name = "textBoxtelekom";
-            textBoxtelekom.Size = new Size(136, 23);
+            textBoxtelekom.Size = new Size(217, 34);
             textBoxtelekom.TabIndex = 0;
             textBoxtelekom.Visible = false;
             textBoxtelekom.TextChanged += textBoxtelekom_TextChanged;
@@ -631,6 +549,11 @@
             notifyIcon8.Visible = true;
             notifyIcon8.MouseDoubleClick += notifyIcon8_MouseDoubleClick;
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.HelpRequest += comboBox1_SelectedIndexChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -644,12 +567,6 @@
             Load += Form1_Load;
             panelbutton1.ResumeLayout(false);
             panelbutton1.PerformLayout();
-            panelkaspi1.ResumeLayout(false);
-            panelkaspi1.PerformLayout();
-            panelkaspi3.ResumeLayout(false);
-            panelkaspi3.PerformLayout();
-            panelkaspi2.ResumeLayout(false);
-            panelkaspi2.PerformLayout();
             flowLayoutPanelCost.ResumeLayout(false);
             flowLayoutPanelCost.PerformLayout();
             flowLayoutPanelMakc.ResumeLayout(false);
@@ -660,13 +577,6 @@
             panel3.ResumeLayout(false);
             panel.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            panel9.ResumeLayout(false);
-            paneltelekom2.ResumeLayout(false);
-            paneltelekom2.PerformLayout();
-            paneltelekom3.ResumeLayout(false);
-            paneltelekom3.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             panel4.ResumeLayout(false);
@@ -694,10 +604,7 @@
         private TextBox textBoxDollar;
         private TextBox textBoxRub;
         private TextBox textBoxEuro;
-        private Panel panel6;
         private ComboBox comboBox1;
-        private TextBox textBoxFir;
-        private TextBox textBoxSec;
         private FlowLayoutPanel flowLayoutPanelCost;
         private ComboBox comboBox2;
         private FlowLayoutPanel flowLayoutPanelMakc;
@@ -707,18 +614,11 @@
         private TextBox textBox1;
         private Panel panelkaspi3;
         private Panel panelkaspi2;
-        private Panel panel9;
-        private Panel panel10;
         private Panel panelkaspi1;
-        private Panel panel11;
         private TextBox textBoxkaspi1;
         private TextBox textBoxkaspi3;
         private TextBox textBoxkaspi2;
-        private Panel paneltelekom2;
         private Panel paneltelek;
-        private Panel paneltelekom3;
-        private TextBox textBoxtelekom2;
-        private TextBox textBoxtelekom3;
         private TextBox textBoxtelekom;
         private NotifyIcon notifyIcon1;
         private NotifyIcon notifyIcon2;
@@ -728,5 +628,10 @@
         private NotifyIcon notifyIcon6;
         private NotifyIcon notifyIcon7;
         private NotifyIcon notifyIcon8;
+        private TextBox textBoxtelekom3;
+        private TextBox textBoxtelekom2;
+        private Panel panel6;
+        private OpenFileDialog openFileDialog1;
+        /*   private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;*/
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Askha\\Source\\Repos\\DesignVAL\\DS\\WinFormsApp3\\WinFormsApp3.csproj": {}
+    "C:\\Users\\Askha\\source\\repos\\DesignVAL\\DS\\WinFormsApp3\\WinFormsApp3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Askha\\Source\\Repos\\DesignVAL\\DS\\WinFormsApp3\\WinFormsApp3.csproj": {
+    "C:\\Users\\Askha\\source\\repos\\DesignVAL\\DS\\WinFormsApp3\\WinFormsApp3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Askha\\Source\\Repos\\DesignVAL\\DS\\WinFormsApp3\\WinFormsApp3.csproj",
+        "projectUniqueName": "C:\\Users\\Askha\\source\\repos\\DesignVAL\\DS\\WinFormsApp3\\WinFormsApp3.csproj",
         "projectName": "WinFormsApp3",
-        "projectPath": "C:\\Users\\Askha\\Source\\Repos\\DesignVAL\\DS\\WinFormsApp3\\WinFormsApp3.csproj",
+        "projectPath": "C:\\Users\\Askha\\source\\repos\\DesignVAL\\DS\\WinFormsApp3\\WinFormsApp3.csproj",
         "packagesPath": "C:\\Users\\Askha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Askha\\Source\\Repos\\DesignVAL\\DS\\WinFormsApp3\\obj\\",
+        "outputPath": "C:\\Users\\Askha\\source\\repos\\DesignVAL\\DS\\WinFormsApp3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -48,6 +48,18 @@
             "HtmlAgilityPack": {
               "target": "Package",
               "version": "[1.11.59, )"
+            },
+            "OxyPlot.Core": {
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "OxyPlot.WindowsForms": {
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "OxyPlot.Wpf": {
+              "target": "Package",
+              "version": "[2.1.2, )"
             },
             "Selenium.Support": {
               "target": "Package",
