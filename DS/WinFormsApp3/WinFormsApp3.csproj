@@ -10,9 +10,6 @@
 
   <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.11.59" />
-    <PackageReference Include="OxyPlot.Core" Version="2.1.2" />
-    <PackageReference Include="OxyPlot.WindowsForms" Version="2.1.2" />
-    <PackageReference Include="OxyPlot.Wpf" Version="2.1.2" />
     <PackageReference Include="Selenium.Support" Version="4.18.1" />
     <PackageReference Include="Selenium.WebDriver" Version="4.18.1" />
   </ItemGroup>
